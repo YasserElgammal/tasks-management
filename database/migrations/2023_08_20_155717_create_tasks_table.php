@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description');
             $table->boolean('completed')->default(false);
             $table->date('due_date');
+            $table->date('completed_at')->nullable();
 
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('category_id')->constrained('users')->onDelete('cascade');

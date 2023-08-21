@@ -20,10 +20,9 @@ class CategoryController extends Controller
 
     public function update(CategoryRequest $request, Category $category)
     {
-        $vaildated = $request->validated();
-        $category->update($vaildated);
+        $category->update($request->validated() + ['user_id' => auth()->id()]);
 
-        return to_route('admin.category.index')->with('message', 'Category Updated');
+        return to_route('admin.categories.index')->with('message', 'Category Updated');
     }
 
     public function destroy(Category $category)

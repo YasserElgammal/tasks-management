@@ -62,6 +62,7 @@
                             <td class="py-4 px-6 border-b border-grey-light">{{ $category->name }}</td>
                             <td class="py-4 px-6 border-b border-grey-light">{{ $category->user->name }}</td>
                             <td class="py-4 px-6 border-b border-grey-light">
+                                <button class="px-4 py-1 text-white font-light tracking-wider bg-green-600 rounded" type="button"  onclick="location.href='{{ route('admin.categories.edit', $category->id) }}';">Edit</button>
 
                                 {{-- <button class="px-4 py-1 text-white font-light tracking-wider bg-green-600 rounded" type="button"  onclick="location.href='{{ route('admin.categories.edit', $category->id) }}';">Edit</button> --}}
                                 <form type="submit" method="POST" style="display: inline"

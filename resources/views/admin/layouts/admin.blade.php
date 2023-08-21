@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tell me - Admin Panel</title>
+    <title>Tasks Management - Admin Panel</title>
     <meta name="author" content="Yasser Elgammal">
     <meta name="description" content="">
 

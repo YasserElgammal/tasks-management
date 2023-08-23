@@ -4,10 +4,11 @@ namespace App\Http\Livewire;
 
 use App\Models\Category as CategoryModel;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Category extends Component
 {
-    public $categories;
+    use WithPagination;
     public $name;
 
     protected $rules = [
@@ -26,7 +27,7 @@ class Category extends Component
     {
         return view(
             'livewire.category',
-            ['categories' => $this->categories = CategoryModel::with('user')->get()]
+            ['categories' => CategoryModel::with('user')->paginate(15)]
         );
     }
 }

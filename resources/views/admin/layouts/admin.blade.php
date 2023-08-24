@@ -18,31 +18,31 @@
         }
 
         .bg-sidebar {
-            background: #A020F0;
+            background: #ffa500;
         }
 
         .cta-btn {
-            color: #A020F0;
+            color: #ffa500;
         }
 
         .upgrade-btn {
-            background: #7b0dbf;
+            background: #ff9000;
         }
 
         .upgrade-btn:hover {
-            background: #7b0dbf;
+            background: #ff9000;
         }
 
         .active-nav-link {
-            background: #7b0dbf;
+            background: #ff9000;
         }
 
         .nav-item:hover {
-            background: #7b0dbf;
+            background: #ff9000;
         }
 
         .account-link:hover {
-            background: #A020F0;
+            background: #ffa500;
         }
     </style>
     <style>
@@ -72,27 +72,27 @@
         </div>
         <nav class="text-white text-base font-semibold">
             <a href="{{ route('admin.index') }}"
-                class="{{ request()->routeIs('admin.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                class="{{ request()->routeIs('admin.index') ? 'active-nav-link' : 'opacity-85 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Dashboard
             </a>
             <a href="{{ route('admin.users.index') }}"
-                class="{{ request()->routeIs('admin.users.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                class="{{ request()->routeIs('admin.users.index') ? 'active-nav-link' : 'opacity-85 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                 <i class="fas fa-user mr-3"></i>
                 User
             </a>
             <a href="{{ route('admin.categories.index') }}"
-                class="{{ request()->routeIs('admin.categories.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                class="{{ request()->routeIs('admin.categories.index') ? 'active-nav-link' : 'opacity-85 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                 <i class="fas fa-code-branch mr-3"></i>
                 Categories
             </a>
             <a href="{{ route('admin.tasks.index') }}"
-                class="{{ request()->routeIs('admin.tasks.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                class="{{ request()->routeIs('admin.tasks.index') ? 'active-nav-link' : 'opacity-85 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                 <i class="fas fa-list mr-3"></i>
                 Tasks
             </a>
             <a href="{{ route('admin.auth_tasks.index') }}"
-                class="{{ request()->routeIs('admin.auth_tasks.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                class="{{ request()->routeIs('admin.auth_tasks.index') ? 'active-nav-link' : 'opacity-85 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                 <i class="fas fa-tasks mr-3"></i>
                 My Assigned Tasks
             </a>
@@ -171,7 +171,7 @@
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button
-                        class="flex items-center text-white opacity-75 hover:opacity-100 py-2 pl-4 nav-item w-full text-left">
+                        class="flex items-center text-white opacity-85 hover:opacity-100 py-2 pl-4 nav-item w-full text-left">
                         <i class="fas fa-sign-out-alt mr-3"></i>
                         Sign Out
                     </button>

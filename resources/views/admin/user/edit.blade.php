@@ -8,7 +8,7 @@
                 <p class="text-xl pb-3 flex items-center">
                     <i class="fas fa-list mr-3"></i> Role Details
                 </p>
-                <form method="POST" action="{{ route('admin.user.update', $user->id) }}">
+                <form method="POST" action="{{ route('admin.users.update', $user->id) }}">
                     @csrf
                     @method('PUT')
                     <div class="grid gap-6 mb-6 md:grid-cols-2">

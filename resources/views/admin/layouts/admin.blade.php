@@ -76,6 +76,11 @@
                 <i class="fas fa-tachometer-alt mr-3"></i>
                 Dashboard
             </a>
+            <a href="{{ route('admin.users.index') }}"
+                class="{{ request()->routeIs('admin.users.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                <i class="fas fa-user mr-3"></i>
+                User
+            </a>
             <a href="{{ route('admin.categories.index') }}"
                 class="{{ request()->routeIs('admin.categories.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
                 <i class="fas fa-code-branch mr-3"></i>

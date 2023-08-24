@@ -15,7 +15,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::name('admin.')->prefix('/admin')->group(function () {
+Route::middleware(['auth', 'can:admin-login'])->name('admin.')->prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('categories', CategoryController::class);
     Route::resource('tasks', TaskController::class);

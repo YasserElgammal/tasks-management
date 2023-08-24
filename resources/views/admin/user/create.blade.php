@@ -8,7 +8,7 @@
                 <p class="text-xl pb-3 flex items-center">
                     <i class="fas fa-list mr-3"></i> User Details
                 </p>
-                <form method="POST" action="{{ route('admin.user.store') }}">
+                <form method="POST" action="{{ route('admin.users.store') }}">
                     @csrf
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                 <div class="mb-1">

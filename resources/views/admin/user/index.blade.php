@@ -4,12 +4,14 @@
         <main class="w-full flex-grow p-6">
             <h1 class="w-full text-3xl text-black pb-6">Users</h1>
 
+            <x-session-message />
+
             <div class="w-full mt-12">
                 <p class="text-xl pb-3 flex items-center">
                     <i class="fas fa-list mr-3"></i> Users Records
                 </p>
                 <button class="px-4 py-1 text-white font-light tracking-wider bg-blue-600 rounded mb-2"
-                onclick="location.href='{{ route('admin.user.create') }}';">Add User</button>
+                onclick="location.href='{{ route('admin.users.create') }}';">Add User</button>
                 <div class="bg-white overflow-auto">
                     <table class="text-left w-full border-collapse">
                         <thead>
@@ -24,11 +26,13 @@
                             @foreach ($users as $user)
                             <tr class="hover:bg-grey-lighter">
                                 <td class="py-4 px-6 border-b border-grey-light">{{ $user->id }}</td>
-                                <td class="py-4 px-6 border-b border-grey-light">{{ $user->first_name }} {{ $user->last_name }}</td>
+                                <td class="py-4 px-6 border-b border-grey-light">{{ $user->name }}</td>
                                 <td class="py-4 px-6 border-b border-grey-light">{{ $user->role->name }}</td>
                                 <td class="py-4 px-6 border-b border-grey-light">
-
-                                    <form type="submit" method="POST" style="display: inline" action="{{ route('admin.user.destroy', $user->id)}}" onsubmit="return confirm('Are you sure?')">
+                                    <button class="px-4 py-1 text-white font-light tracking-wider bg-green-600 rounded"
+                                    type="button"
+                                    onclick="location.href='{{ route('admin.users.edit', $user->id) }}';">Edit</button>
+                                    <form type="submit" method="POST" style="display: inline" action="{{ route('admin.users.destroy', $user->id)}}" onsubmit="return confirm('Are you sure?')">
                                         @csrf
                                         @method('DELETE')
                                     <button class="px-4 py-1 text-white font-light tracking-wider bg-red-600 rounded" type="submit">Delete</button>

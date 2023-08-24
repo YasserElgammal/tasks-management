@@ -53,7 +53,7 @@
             background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
         }
     </style>
-        @livewireStyles
+    @livewireStyles
 </head>
 
 <body class="bg-gray-200 font-family-karla flex">
@@ -87,10 +87,15 @@
                 Categories
             </a>
             <a href="{{ route('admin.tasks.index') }}"
-            class="{{ request()->routeIs('admin.tasks.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
-            <i class="fas fa-list mr-3"></i>
-            Tasks
-        </a>
+                class="{{ request()->routeIs('admin.tasks.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                <i class="fas fa-list mr-3"></i>
+                Tasks
+            </a>
+            <a href="{{ route('admin.auth_tasks.index') }}"
+                class="{{ request()->routeIs('admin.auth_tasks.index') ? 'active-nav-link' : 'opacity-75 hover:opacity-100' }} flex items-center text-white py-4 pl-6 nav-item">
+                <i class="fas fa-tasks mr-3"></i>
+                My Assigned Tasks
+            </a>
 
 
         </nav>
@@ -208,7 +213,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
         integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 
-        @livewireScripts
+    @livewireScripts
 </body>
 
 </html>

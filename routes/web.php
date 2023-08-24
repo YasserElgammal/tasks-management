@@ -18,6 +18,8 @@ Route::get('/dashboard', function () {
 Route::middleware(['auth', 'can:admin-login'])->name('admin.')->prefix('/admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('categories', CategoryController::class);
+    Route::get('/assigned-tasks', [TaskController::class, 'showAuthAssignedTasks'])->name('auth_tasks.index');
+    Route::post('/complete-task/{id}', [TaskController::class, 'taskCompleteButton'])->name('complete_task.store');
     Route::resource('tasks', TaskController::class);
     Route::resource('users', UserController::class);
 

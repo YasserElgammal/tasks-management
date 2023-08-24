@@ -38,4 +38,27 @@ class TaskController extends Controller
 
         return to_route('admin.tasks.index')->with('message', 'Task Deleted !');
     }
+
+    public function showAuthAssignedTasks()
+    {
+        $authAssignedTasks = Task::with('user', 'category')
+            ->where('assigned_to_user_id', auth()->id())->paginate(15);
+
+        return view('admin.task.assigned_tasks', compact('authAssignedTasks'));
+    }
+
+    public function taskCompleteButton($id)
+    {
+        $switchTaskStatus = Task::where('assigned_to_user_id', auth()->id())->findOrFail($id);
+
+        if ($switchTaskStatus->completed) {
+            return to_route('admin.auth_tasks.index')->with('message', 'Task Already Completed !');
+        }
+
+        $switchTaskStatus->completed = true;
+        $switchTaskStatus->completed_at = now()->toDateString();
+        $switchTaskStatus->save();
+
+        return to_route('admin.auth_tasks.index')->with('message', 'Task Status Updated !');
+    }
 }

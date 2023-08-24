@@ -11,7 +11,16 @@
                     <div class="px-10 py-6">
                         <div class="font-bold text-xl mb-2 text-center">Users</div>
                         <p class="text-gray-700 text-5xl text-center">
-                            {{-- {{ $users }} --}}
+                            {{ $users }}
+                        </p>
+                    </div>
+                </div>
+
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
+                    <div class="px-10 py-6">
+                        <div class="font-bold text-xl mb-2 text-center">Categories</div>
+                        <p class="text-gray-700 text-5xl text-center">
+                            {{ $categories }}
                         </p>
                     </div>
                 </div>
@@ -20,7 +29,7 @@
                     <div class="px-10 py-6">
                         <div class="font-bold text-xl mb-2 text-center">Tasks</div>
                         <p class="text-gray-700 text-5xl text-center">
-                            {{-- {{ $messages }} --}}
+                            {{ $tasks }}
                         </p>
                     </div>
                 </div>
@@ -29,7 +38,7 @@
                     <div class="px-10 py-6">
                         <div class="font-bold text-xl mb-2 text-center">Completed Tasks</div>
                         <p class="text-gray-700 text-5xl text-center">
-                            {{-- {{ $comments }} --}}
+                            {{ $completedTasks }}
                         </p>
                     </div>
                 </div>

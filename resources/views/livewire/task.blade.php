@@ -108,11 +108,11 @@
                             <td class="py-4 px-6 border-b border-grey-light">{{ $task->id }}</td>
                             <td class="py-4 px-6 border-b border-grey-light">{{ $task->title }}</td>
                             <td class="py-4 px-6 border-b border-grey-light">{{ $task->user->name }}</td>
-                            <td class="py-4 px-6 border-b border-grey-light">{{ $task->assignedUser->name }}</td>
+                            <td class="py-4 px-6 border-b border-grey-light {{ $task->assignedUser->name ?? "text-red-700" }}">{{ $task->assignedUser->name ?? "Not Assigned" }}</td>
                             <td class="py-4 px-6 border-b border-grey-light">
                                 <button class="px-4 py-1 text-white font-light tracking-wider bg-green-600 rounded"
                                     type="button"
-                                    onclick="location.href='{{ route('admin.categories.edit', $category->id) }}';">Edit</button>
+                                    onclick="location.href='{{ route('admin.tasks.edit', $task->id) }}';">Edit</button>
 
                                 {{-- <button class="px-4 py-1 text-white font-light tracking-wider bg-green-600 rounded" type="button"  onclick="location.href='{{ route('admin.categories.edit', $category->id) }}';">Edit</button> --}}
                                 <form type="submit" method="POST" style="display: inline"

@@ -8,9 +8,9 @@ This is a task management application built with Laravel and Livewire. It allows
 
 - User Management: The app allows you to create users with different roles. You can assign roles to users based on their responsibilities within the organization.
 
-- Task Creation: Admin can create tasks and specify a due date for each task. This helps in organizing and prioritizing tasks effectively.
+- Task Creation: The admin can create tasks and specify a due date for each task. This helps in organizing and prioritizing tasks effectively.
 
-- Task Assignment: Tasks can be assigned to specific employee. By assigning tasks to individuals, you can ensure clear ownership and streamline task distribution.
+- Task Assignment: Tasks can be assigned to specific employees. By assigning tasks to individuals, you can ensure clear ownership and streamline task distribution.
 
 - Task Completion: Users can mark tasks as complete once they finish working on them. This provides a visual indicator of the progress made on each task.
 
@@ -36,7 +36,7 @@ password
 ````
 ## About Me
 
-A Junior Backend Developer with one year of experience in web development, my expertise lies in
+A Junior Backend Developer with 1+ year of experience in web development, my expertise lies in
 PHP Laravel. Strong foundation in creating efficient and scalable web solutions. Skills include
 Laravel, PHP, TailwindCSS, and Livewire. Enjoy working with MySQL databases and REST APIs.
 Dedication to producing clean, well-documented code and sharing knowledge with others is
